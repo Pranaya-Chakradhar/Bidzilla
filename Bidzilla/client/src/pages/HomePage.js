@@ -10,7 +10,8 @@ const HomePage = () => {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:5000/api/listings");
+   const res = await fetch("http://localhost:5000/api/listings");
+
       if (!res.ok) throw new Error("Failed to fetch listings");
       const data = await res.json();
       setListings(data);
